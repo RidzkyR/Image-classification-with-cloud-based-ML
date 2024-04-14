@@ -65,3 +65,10 @@ fun uriToFile(imageUri: Uri, context: Context): File{
     inputStream.close()
     return myFile
 }
+
+fun File.reduceFileImage(): File {
+    val file = this
+    val bitmap = BitmapFactory.decodeFile(file.path)
+
+    return file
+}
